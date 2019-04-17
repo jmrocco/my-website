@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+
+body {
+  background-color: rgb(151, 234, 192);
+}
+
+
+.home-header {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-header h1, .home-header h2, .home-header a {
+  font-family: 'Roboto Mono', monospace;
+
+
+}
+.home-header h1 {
+  font-size: 35px;
+  width: 300px;
+  position: fixed;
+  left: 20px;
+
+}
+
+.home-header h2 {
+  font-size: 18px;
+  position: fixed;
+  top: 20px;
+}
+.home-header a {
+  font-size: 18px;
+  position: fixed;
+  top: 55px;
+  left:15px;
+}
+
+
+#social-media{
+  position: fixed;
+  top: 80px;
+  left: 30px;
+}
+
+.navBar{
+  position:fixed;
+  right: 30px;
+}
+
+
+
+.aboutMe {
+  position: absolute;
+  top: 200px;
+  right: 100px;
+}
+
+#icon {
+  position: absolute;
+  top: 100px;
+  bottom: 100px;
+  left: 400px;
+}
+
+.projects {
+  position: absolute;
+  top: 300px;
+}
+
+.standouts {
+  position: absolute;
+  top: 400px
+}
+
+.experience {
+  position: absolute;
+  top: 500px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}
