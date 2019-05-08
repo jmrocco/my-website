@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+
+body {
+  background-color: rgb(151, 234, 192);
+}
+
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-header h1, .home-header h2, .home-header a {
+  font-family: 'Roboto Mono', monospace;
+
+
+}
+.home-header h1 {
+  font-size: 35px;
+  width: 300px;
+  position: fixed;
+  left: 20px;
+
+}
+
+.home-header h2 {
+  font-size: 18px;
+  position: fixed;
+  top: 20px;
+}
+.home-header a {
+  font-size: 18px;
+  position: fixed;
+  top: 55px;
+  left:15px;
+  background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 3px 3px;
+  color: #000;
+  text-decoration: none;
+}
+
+
+#waterlooLink:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+}
+
+#portfolio {
+  top: 30px;
+  width: 25px;
+  length: 25px;
+  left:60px;
+}
+
+#linkedin {
+  top: 29px;
+  left: 105px;
+  width: 20px;
+  length: 20px;
+
+}
+
+#email {
+  top: 31px;
+  left: 200px;
+  width:20px;
+  height:20px;
+}
+
+#github {
+  top: 28px;
+  left: 155px;
+  width:20px;
+  length:20px;
+}
+
+#github, #email, #linkedin, #portfolio {
+  transition-timing-function: ease-in-out;
+  transition: 0.5s;
+  position: relative;
+}
+
+#portfolio:hover, #linkedin:hover, #github:hover, #email:hover{
+  fill: white;
+
+}
+
+.navBar{
+  position:fixed;
+  z-index: 9999;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,191,255,0) 16%, rgba(6,194,233,0) 32%, rgba(9,195,223,1) 40%, rgba(31,203,149,1) 74%, rgba(31,203,149,1) 93%, rgba(31,203,149,1) 98%);
+  height: 20px;
+  width:100%;
+  float: left;
+}
+
+
+.about {
+  width: 40%;
+}
+
+
+.proj {
+  position: relative;
+  top: 300px;
+  left: 600px;
+  width: 10%;
+}
+
+.stand {
+  position: relative;
+  top: 400px;
+  width: 10%;
+  left: 600px;
+}
+
+.exp {
+  position: relative;
+  top: 500px;
+  width: 10%;
+  left: 600px;
+}
+
+footer {
+  position: relative;
+  top:500px;
+}
+
+
+#aboutMe, #projects, #standouts, #experience {
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+  position: fixed;
+  text-decoration: none;
+}
+
+#aboutMe{
+  right: 400px;
+}
+
+#projects {
+  right: 300px;
+}
+
+#standouts {
+  right: 190px;
+}
+
+#experience {
+  right: 70px;
+
+}
+
+#aboutMe:active,#projects:active, #standouts:active , #experience:active {
+  font-weight: 700;
+}
+
+#aboutMeP {
+  position: relative;
+  line-height: 1.6;
+  width: 800px;
+  font-size: 20px;
+  text-align: center;
+  left: 600px;
+  top: 240px;
+}
+
+
+#welcome {
+  position: relative;
+  top: 230px;
+  left: 600px;
+
+}
+
+
+#icon {
+position: fixed;
+left: 70px;
+top: 350px;
+}
