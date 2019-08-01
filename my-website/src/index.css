@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-
 body {
   background-color: rgb(151, 234, 192);
   magin:0px;
@@ -16,8 +15,9 @@ h2 {
   font-size:1.5vw;
 }
 
-p {
-  font-size:1.7vw;
+
+ul {
+  font-size: 1.7
 }
 
 #title-bar {
@@ -32,9 +32,6 @@ p {
   font-family: 'Roboto Mono', monospace;
 }
 
-#icon {
-  margin-top: 40%;
-}
 
 #waterlooLink {
   background: linear-gradient(to bottom, var(--mainColor) 0%, var(--mainColor) 100%);
@@ -103,4 +100,28 @@ p {
   width:60%;
   float: right;
   margin-top:12vw;
+}
+
+#welcome {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.7vw;
+    word-spacing: -3.4px;
+    font-weight: 700;
+}
+
+#projects , #cool ,#about {
+  font-family: 'Roboto Mono', monospace;
+  padding: 4rem 8rem;
+  display: inline-block;
+  border: 3px solid #333333;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  background: #ffffff;
+}
+
+#welcome-p {
+  font-family: 'Roboto Mono', monospace;
+}
+
+#about-section, #project-section, #cool-section {
+  height:1.5vw;
 }
