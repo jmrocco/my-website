@@ -1,12 +1,12 @@
-//TODO-> when you click links it scrolls really far up
-//TODO-> integrate skills smoothly, add pictures and videos of things i've made
-//TODO-> lifeguarding, photoshop, soccer, tennis photos
+
+//TODO-> extracirriculars
 
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as THREE from "three";
+
 
 
 class Document  extends Component
@@ -35,8 +35,8 @@ class Document  extends Component
                       <a href="#cool-section">Extracurriculars</a>
                   </div>
                 </div>
+                <Shape />
                 <div id="content">
-
                     <About />
                     <div id="project-section"></div>
                     <Projects />
@@ -47,75 +47,17 @@ class Document  extends Component
         );
 }}
 
-class Shape extends Component {
-  constructor(props) {
-
-    super(props);
-    this.animate = this.animate.bind(this);
-    this.addMe = this.addMe.bind(this);
-    this.initializeCamera = this.initializeCamera.bind(this);
-
-  }
-componentDidMount() {
-
-    this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    this.renderer = new THREE.WebGLRenderer({ antialias: true });
-
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.mount.appendChild(this.renderer.domElement);
-
-    this.initializeCamera();
-
-    const geometry = new THREE.BoxBufferGeometry( 1, 1, 1 );
-    const material = new THREE.MeshBasicMaterial( { color: 0xFF00FF } );
-    this.me = new THREE.Mesh( geometry, material );
-    this.scene.add( this.me );
-    this.animate();
-
-  }
-componentWillUnmount() {
-
-    cancelAnimationFrame(this.frameId);
-    this.mount.removeChild(this.renderer.domElement);
-  }
-
-initializeCamera() {
-
-    this.camera.position.x = 0;
-    this.camera.position.y = 0;
-    this.camera.position.z = 4;
-
-  }
-animate(me) {
-
-    this.frameId = window.requestAnimationFrame(this.animate);
-    this.renderer.render(this.scene, this.camera);
-    this.me.rotation.x += 0.01;
-    this.me.rotation.y += 0.01;
-
-  }
-addMe(me) {
-
-    this.scene.add(this.me);
-
-  }
-
-render() {
-    return (
-      <div>
-        <div
-          id="boardCanvas"
-          style={{ width: "80vw", height: "40vw" }}
-          ref={mount => {
-            this.mount = mount;
-          }}
-        />
+class Shape extends Component
+{
+  render()
+  {
+    return(
+      <div className="shape">
+      <img src={require('./images/jemoji.png')} alt="Juliette emoji" />
       </div>
     );
   }
 }
-
 
 
 class About extends Component {
@@ -154,8 +96,8 @@ class About extends Component {
         of programming experience in various areas such as <strong>mobile applications</strong>,<strong> game development</strong>,<strong> desktop tools </strong>
         and <strong>full-stack applications</strong>. I've also dabbeled In hardware creating projects using <strong>Arduino's</strong>,<strong> Raspberry Pi's</strong>,
         and <strong>fuel cells</strong>.
-        Asides from technology, I have a variety of interests. I enjoy being outside playing sports such as tennis and soccer. When I'm not outside you'll find me reading
-        Gone With The Wind, or <strong>Photoshopping</strong> pictures of myself to have flames coming out of my hands. Right now my goal is to learn as many different things
+        Asides from technology, I have a variety of interests. I enjoy being outside playing sports such as <strong>tennis</strong> and <strong>soccer</strong>. When I'm not outside you'll find me reading
+        <strong> Gone With The Wind</strong>, or <strong>photoshopping</strong> pictures of myself to have flames coming out of my hands. Right now my goal is to learn as many different things
         as I can and make myself into a well rounded engineering student. Please feel free to reach out If you have any questions, I would love to hear from you!</p>
       </div>
     );
@@ -169,25 +111,39 @@ class Projects extends Component
         return(
             <div id="projects">
                 <h1>Projects</h1>
+                    <br></br>
                     <strong>Wordpress to Markdown API:</strong>
                     <p>While working at ConsenSys, I created a Wordpress to Markdown Converter. Users submit either an .xml Wordpress file or a link to their Wordpress site.
-                    The Wordpress script extracts articles/posts and converts them into a readable Markdown format to be used on the <a href="https://kauri.io/" id="kauri">Kauri.io</a> documentation platform.</p>
+                    The Wordpress script extracts articles/posts and converts them into a readable Markdown format to be used on the <a href="https://kauri.io/" target="_blank" id="kauri">Kauri.io</a> documentation platform.</p>
+                    <br></br>
                     <strong>BankerGoose:</strong>
                     <p>ENGHACK 2019 Interac Best Use of Design Thinking Winner. BankerGoose is a money management application with a twist.
                     Parents have the ability to track their childs progress in regards to chores.
                     As chores are completed, the child is rewarded with their allowance but also with digital money towards a money management game of life.
-                    The child is motivated to succeed In the game of life to earn virtual and real rewards.</p>
+                    The child is motivated to succeed In the game of life to earn virtual and real rewards. Check out the <a href="https://devpost.com/software/bankergoose" target="_blank">DevPost</a> to learn more!</p>
+                    <img id="bankergoose" src={require('./images/bankergoose.png')} alt="BankerGoose" />
+                    <br></br>
+                    <br></br>
+                    <br></br>
                     <strong>Object Detection Hat for The Blind:</strong>
                     <p>A hat for the visually impaired that can detect an obstacle such as a wall and alert It’s user through a series of beeps.
                     This project was created using a cowboy hat, an Arduino Uno, and some sonar sensors.</p>
+                    <br></br>
                     <strong>Sims 3 Video Game:</strong>
                     <p>A personal rendition of the popular Sims 3 video game. It has <strike>almost</strike> all the features that the real game has.</p>
+                    <img id="simsgame" src={require('./images/sims.png')} alt="Sims" />
+                    <br></br>
+                    <br></br>
                     <strong>Eco-Sphere</strong>
                     <p>An educational Android app to encourage kids to be excited about recycling. Users are prompted to log when they recycle and as more products
-                    are recorded, a virtual polluted environment is cleansed. This project was created for ECOding Hacks 2019 at York University. Eco-Sphere placed 2nd overall In Its category.</p>
+                    are recorded, a virtual polluted environment is cleansed. <img id="eco" src={require('./images/ecoSphere.png')} alt="Eco-Sphere" /> This project was created for ECOding Hacks 2019 at York University. Eco-Sphere placed 2nd overall In Its category.
+                    Check out the <a href="https://devpost.com/software/ecosphere" target="_blank">DevPost!</a></p>
                     <strong>Autonomous Maze Robot:</strong>
                     <p>An autonomus robot that was designed to escape a maze. It used sonar sensors to detect it's position from the walls, and
                     based on this information would make a decision about which way to go.</p>
+                    <h1>Current Projects</h1>
+                    <strong><br></br>Magic Mirror with Google Voice AI:</strong>
+                    <p>More details coming soon..</p>
 
             </div>
         );
@@ -201,15 +157,29 @@ class Cool extends Component
         return(
             <div id="cool">
             <h1>Extracurriculars</h1>
-            <p>Renaissance art, Gone with The Wind, tennis, playing soccer, lifeguarding, photoshop, really old movies, robots, space, Stranger Things, reading, coding, spicy food, trying new things.</p>
-            <p>Currently, a student in <strong>Computer Engineering</strong> at The University of Waterloo who is looking to create and be a part of tomorrows future.
-            I am a <strong>passionate</strong> and energetic person with a love for technology. Right now I have <strong>6</strong> years
-            of programming experience in various areas such as <strong>mobile applications</strong>,<strong> game development</strong>,<strong> desktop tools </strong>
-            and <strong>full-stack applications</strong>. I've also dabbeled In hardware creating projects using <strong>Arduino's</strong>,<strong> Raspberry Pi's</strong>,
-            and <strong>fuel cells</strong>.
-            Asides from technology, I have a variety of interests. I enjoy being outside playing sports such as tennis and soccer. When I'm not outside you'll find me reading
-            Gone With The Wind, or <strong>Photoshopping</strong> pictures of myself to have flames coming out of my hands. Right now my goal is to learn as many different things
-            as I can and make myself into a well rounded engineering student. Please feel free to reach out If you have any questions, I would love to hear from you!</p>
+            <div class ="gallery">
+                <div>
+                    <img class="picture" src={require('./images/flying.jpg')} alt="Helicopter Ride" />
+                </div>
+                <div>
+                    <img class="picture" src={require('./images/photoshop.jpg')} alt="Soccer" />
+                </div>
+                <div>
+                    <img class="picture" src={require('./images/hackathon.jpg')} alt="EngHack 2019" />
+                </div>
+                <div>
+                    <img class="picture" src={require('./images/lifeguard.jpg')} alt="Lifeguard Photo" />
+                </div>
+                <div>
+                    <img class="picture" src={require('./images/soccer.jpg')} alt="Soccer" />
+                </div>
+                <div>
+                    <img  class="picture" src={require('./images/engineering.jpg')} alt="Engineering" />
+                </div>
+                <div>
+                    <img class="picture" src={require('./images/skyley.JPG')} alt="Skyley" />
+                </div>
+            </div>
             </div>
         );
     }
