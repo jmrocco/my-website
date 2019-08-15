@@ -63,42 +63,42 @@ class Shape extends Component
 class About extends Component {
   constructor(props) {
     super(props);
-    this.loading = this.loading.bind(this);
-    this.elRef = React.createRef();
+     // this.loading = this.loading.bind(this);
+     // this.elRef = React.createRef();
   }
 
-  componentDidMount() {
-    this.loading();
-  }
-
-  loading() {
-    const el = this.elRef.current;
-    let i = 0;
-    let txt = 'Hello, nice to meet you! I\'m Juliette.';
-    let speed = 50;
-    function typeWriter() {
-      if (i < txt.length) {
-        el.innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    typeWriter();
-  }
+   // componentDidMount() {
+   //   this.loading();
+   // }
+   //
+   // loading() {
+   //   const el = this.elRef.current;
+   //   let i = 0;
+   //   let txt = 'Hello, nice to meet you! I\'m Juliette.';
+   //   let speed = 50;
+   //   function typeWriter() {
+   //     if (i < txt.length) {
+   //       el.innerHTML += txt.charAt(i);
+   //       i++;
+   //       setTimeout(typeWriter, speed);
+   //     }
+   //   }
+   //   typeWriter();
+  //}
 
   render() {
     return (
       <div className="about">
       <div id="about-section"></div>
-        <p id="welcome" ref={this.elRef} />
+        <p class="hello anim-typewriter">Hi, nice to meet you! I'm Juliette.</p>
         <p id="welcome-p">Currently, a student in <strong>Computer Engineering</strong> at The University of Waterloo who is looking to create and be a part of tomorrows future.
         I am a <strong>passionate</strong> and energetic person with a love for technology. Right now I have <strong>6</strong> years
         of programming experience in various areas such as <strong>mobile applications</strong>,<strong> game development</strong>,<strong> desktop tools </strong>
-        and <strong>full-stack applications</strong>. I've also dabbeled In hardware creating projects using <strong>Arduino's</strong>,<strong> Raspberry Pi's</strong>,
+        and <strong>full-stack applications</strong>. I've also dabbled In hardware creating projects using <strong>Arduino's</strong>,<strong> Raspberry Pi's</strong>,
         and <strong>fuel cells</strong>.
         Asides from technology, I have a variety of interests. I enjoy being outside playing sports such as <strong>tennis</strong> and <strong>soccer</strong>. When I'm not outside you'll find me reading
         <strong> Gone With The Wind</strong>, or <strong>photoshopping</strong> pictures of myself to have flames coming out of my hands. Right now my goal is to learn as many different things
-        as I can and make myself into a well rounded engineering student. Please feel free to reach out If you have any questions, I would love to hear from you!</p>
+        as I can and make myself into a well-rounded engineering student. Please feel free to reach out If you have any questions, I would love to hear from you!</p>
       </div>
     );
   }
@@ -117,10 +117,10 @@ class Projects extends Component
                     The Wordpress script extracts articles/posts and converts them into a readable Markdown format to be used on the <a href="https://kauri.io/" target="_blank" id="kauri">Kauri.io</a> documentation platform.</p>
                     <br></br>
                     <strong>BankerGoose:</strong>
-                    <p>ENGHACK 2019 Interac Best Use of Design Thinking Winner. BankerGoose is a money management application with a twist.
+                    <p><strong id="enghack">ENGHACK 2019</strong><strong> Interac Best Use of Design Thinking Winner</strong>. BankerGoose is a money management application with a twist.
                     Parents have the ability to track their childs progress in regards to chores.
                     As chores are completed, the child is rewarded with their allowance but also with digital money towards a money management game of life.
-                    The child is motivated to succeed In the game of life to earn virtual and real rewards. Check out the <a href="https://devpost.com/software/bankergoose" target="_blank">DevPost</a> to learn more!</p>
+                    The child is motivated to succeed In the game of life to earn virtual and real rewards. Check out the <a href="https://devpost.com/software/bankergoose" target="_blank" id="devpost">DevPost</a> to learn more!</p>
                     <img id="bankergoose" src={require('./images/bankergoose.png')} alt="BankerGoose" />
                     <br></br>
                     <br></br>
@@ -137,8 +137,8 @@ class Projects extends Component
                     <strong>Eco-Sphere</strong>
                     <p>An educational Android app to encourage kids to be excited about recycling. Users are prompted to log when they recycle and as more products
                     are recorded, a virtual polluted environment is cleansed. <img id="eco" src={require('./images/ecoSphere.png')} alt="Eco-Sphere" /> This project was created for ECOding Hacks 2019 at York University. Eco-Sphere placed 2nd overall In Its category.
-                    Check out the <a href="https://devpost.com/software/ecosphere" target="_blank">DevPost!</a></p>
-                    <strong>Autonomous Maze Robot:</strong>
+                    Check out the <a id="ecodev" href="https://devpost.com/software/ecosphere" target="_blank">DevPost</a>!</p>
+                    <br></br><strong>Autonomous Maze Robot:</strong>
                     <p>An autonomus robot that was designed to escape a maze. It used sonar sensors to detect it's position from the walls, and
                     based on this information would make a decision about which way to go.</p>
                     <h1>Current Projects</h1>
