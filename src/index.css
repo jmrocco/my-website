@@ -3,7 +3,7 @@
 body {
   background-color: rgb(151, 234, 192);
   magin:0px;
-  padding: 0%;
+  padding: 0px;
 }
 
 p {
@@ -142,12 +142,12 @@ max-width: 100%;
    font-weight: bold;
    margin: 0;
    border-right: 2px solid rgba(255,255,255,.75);
-   font-size: 180%;
+   font-size: 1.5rem;
    white-space: nowrap;
    overflow: hidden;
-   transform: translateY(-50%);
    font-family: 'Roboto Mono', 'monospace';
    word-spacing: -2.4px;
+   max-width: 55%;
   }
 
   .anim-typewriter{

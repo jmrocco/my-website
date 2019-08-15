@@ -15,6 +15,7 @@ class Document  extends Component
     render()
     {
         return(
+
             <div className="homePage">
                 <div id="title-bar">
                   <div className="home-header">
@@ -61,31 +62,6 @@ class Shape extends Component
 
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-     // this.loading = this.loading.bind(this);
-     // this.elRef = React.createRef();
-  }
-
-   // componentDidMount() {
-   //   this.loading();
-   // }
-   //
-   // loading() {
-   //   const el = this.elRef.current;
-   //   let i = 0;
-   //   let txt = 'Hello, nice to meet you! I\'m Juliette.';
-   //   let speed = 50;
-   //   function typeWriter() {
-   //     if (i < txt.length) {
-   //       el.innerHTML += txt.charAt(i);
-   //       i++;
-   //       setTimeout(typeWriter, speed);
-   //     }
-   //   }
-   //   typeWriter();
-  //}
-
   render() {
     return (
       <div className="about">
