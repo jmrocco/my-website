@@ -134,27 +134,18 @@ class Cool extends Component
             <div id="cool">
             <h1>Extracurriculars</h1>
             <div class ="gallery">
-                <div>
-                    <img class="picture" src={require('./images/flying.jpg')} alt="Helicopter Ride" />
-                </div>
-                <div>
-                    <img class="picture" src={require('./images/photoshop.jpg')} alt="Soccer" />
-                </div>
-                <div>
-                    <img class="picture" src={require('./images/hackathon.jpg')} alt="EngHack 2019" />
-                </div>
-                <div>
-                    <img class="picture" src={require('./images/lifeguard.jpg')} alt="Lifeguard Photo" />
-                </div>
-                <div>
-                    <img class="picture" src={require('./images/soccer.jpg')} alt="Soccer" />
-                </div>
-                <div>
-                    <img  class="picture" src={require('./images/engineering.jpg')} alt="Engineering" />
-                </div>
-                <div>
-                    <img class="picture" src={require('./images/skyley.JPG')} alt="Skyley" />
-                </div>
+                    <img class="box one" src={require('./images/flying.jpg')} alt="Helicopter Ride" />
+                    <p id="p-one">I'm a thrill seeker.</p>
+                    <img class="box two" src={require('./images/soccer.jpg')} alt="Soccer" />
+                    <p id="p-two">Soccer and tennis are my favourite sports.</p>
+                    <img class="box three" src={require('./images/engineering.jpg')} alt="Engineering" />
+                    <p id="p-three">I'm actively trying to be an engineer.</p>
+                    <img class="box four" src={require('./images/photoshop.jpg')} alt="Photoshop" />
+                    <p id="p-four">I'm creative.</p>
+                    <img class="box five" src={require('./images/lifeguard.jpg')} alt="Lifeguard" />
+                    <p id="p-five">Certified lifeguard and sunbather.</p>
+                    <img class="box six" src={require('./images/food.jpg')} alt="Pasta" />
+                    <p id="p-six">I like good food.</p>
             </div>
             </div>
         );
