@@ -8,6 +8,7 @@ body {
 
 p {
   margin-block-end: 0%;
+  font-size: 1.5vw;
 }
 
 h1 {
@@ -20,6 +21,10 @@ h2 {
   font-size:1.5vw;
 }
 
+h3 {
+    margin: 0px;
+    font-size:2.2vw;
+}
 
 ul {
   font-size: 1.7
@@ -124,7 +129,7 @@ max-width: 100%;
 
 #projects{
   font-family: 'Roboto Mono', monospace;
-  padding: 4rem 8rem;
+  padding: 4% 8%;
   display: inline-block;
   border: 3px solid #333333;
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
@@ -133,7 +138,7 @@ max-width: 100%;
 
 #cool {
   font-family: 'Roboto Mono', monospace;
-  padding: 4rem 8rem;
+  padding: 4% 8%;
   display: inline-block;
   border: 3px solid #333333;
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
@@ -146,16 +151,15 @@ max-width: 100%;
 
 
   .hello {
-   top: 50%;
    font-weight: bold;
    margin: 0;
    border-right: 2px solid rgba(255,255,255,.75);
-   font-size: 1.5rem;
+   font-size: 2vw;
    white-space: nowrap;
    overflow: hidden;
    font-family: 'Roboto Mono', 'monospace';
-   word-spacing: -2.4px;
-   max-width: 55%;
+   word-spacing: -2.4%;
+   width: 75%;
   }
 
   .anim-typewriter{
@@ -164,7 +168,7 @@ max-width: 100%;
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 24em;}
+  to{width: 75%;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: #e3b644;}
@@ -202,7 +206,7 @@ max-width: 100%;
 
 .gallery {
   display:grid;
-  grid-gap:10px;
+  grid-gap:1%;
   grid-template-columns:[col1-start] 25%  [col2-start] 25%  [col3-start] 25% [col4-start] 25% [col5-end];
   grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] auto [row4-end];
 

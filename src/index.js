@@ -1,7 +1,4 @@
 
-//TODO-> extracirriculars
-
-
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -88,11 +85,11 @@ class Projects extends Component
             <div id="projects">
                 <h1>Projects</h1>
                     <br></br>
-                    <strong>Wordpress to Markdown API:</strong>
+                    <h3>Wordpress to Markdown API:</h3>
                     <p>While working at ConsenSys, I created a Wordpress to Markdown Converter. Users submit either an .xml Wordpress file or a link to their Wordpress site.
                     The Wordpress script extracts articles/posts and converts them into a readable Markdown format to be used on the <a href="https://kauri.io/" target="_blank" id="kauri">Kauri.io</a> documentation platform.</p>
                     <br></br>
-                    <strong>BankerGoose:</strong>
+                    <h3>BankerGoose:</h3>
                     <p><strong id="enghack">ENGHACK 2019</strong><strong> Interac Best Use of Design Thinking Winner</strong>. BankerGoose is a money management application with a twist.
                     Parents have the ability to track their childs progress in regards to chores.
                     As chores are completed, the child is rewarded with their allowance but also with digital money towards a money management game of life.
@@ -105,20 +102,20 @@ class Projects extends Component
                     <p>A hat for the visually impaired that can detect an obstacle such as a wall and alert It’s user through a series of beeps.
                     This project was created using a cowboy hat, an Arduino Uno, and some sonar sensors.</p>
                     <br></br>
-                    <strong>Sims 3 Video Game:</strong>
+                    <h3>Sims 3 Video Game:</h3>
                     <p>A personal rendition of the popular Sims 3 video game. It has <strike>almost</strike> all the features that the real game has.</p>
                     <img id="simsgame" src={require('./images/sims.png')} alt="Sims" />
                     <br></br>
                     <br></br>
-                    <strong>Eco-Sphere</strong>
+                    <h3>Eco-Sphere:</h3>
                     <p>An educational Android app to encourage kids to be excited about recycling. Users are prompted to log when they recycle and as more products
                     are recorded, a virtual polluted environment is cleansed. <img id="eco" src={require('./images/ecoSphere.png')} alt="Eco-Sphere" /> This project was created for ECOding Hacks 2019 at York University. Eco-Sphere placed 2nd overall In Its category.
                     Check out the <a id="ecodev" href="https://devpost.com/software/ecosphere" target="_blank">DevPost</a>!</p>
-                    <br></br><strong>Autonomous Maze Robot:</strong>
+                    <br></br><h3>Autonomous Maze Robot:</h3>
                     <p>An autonomus robot that was designed to escape a maze. It used sonar sensors to detect it's position from the walls, and
                     based on this information would make a decision about which way to go.</p>
                     <h1>Current Projects</h1>
-                    <strong><br></br>Magic Mirror with Google Voice AI:</strong>
+                    <h3><br></br>Magic Mirror with Google Voice AI:</h3>
                     <p>More details coming soon..</p>
 
             </div>
@@ -132,21 +129,21 @@ class Cool extends Component
     {
         return(
             <div id="cool">
-            <h1>Extracurriculars</h1>
-            <div class ="gallery">
-                    <img class="box one" src={require('./images/flying.jpg')} alt="Helicopter Ride" />
-                    <p id="p-one">I'm a thrill seeker.</p>
-                    <img class="box two" src={require('./images/soccer.jpg')} alt="Soccer" />
-                    <p id="p-two">Soccer and tennis are my favourite sports.</p>
-                    <img class="box three" src={require('./images/engineering.jpg')} alt="Engineering" />
-                    <p id="p-three">I'm actively trying to be an engineer.</p>
-                    <img class="box four" src={require('./images/photoshop.jpg')} alt="Photoshop" />
-                    <p id="p-four">I'm creative.</p>
-                    <img class="box five" src={require('./images/lifeguard.jpg')} alt="Lifeguard" />
-                    <p id="p-five">Certified lifeguard and sunbather.</p>
-                    <img class="box six" src={require('./images/food.jpg')} alt="Pasta" />
-                    <p id="p-six">I like good food.</p>
-            </div>
+                <h1>Extracurriculars</h1>
+                <div class ="gallery">
+                        <img class="one" src={require('./images/flying.jpg')} alt="Helicopter Ride" />
+                        <p id="p-one">I'm a thrill seeker.</p>
+                        <img class="two" src={require('./images/soccer.jpg')} alt="Soccer" />
+                        <p id="p-two">Soccer and tennis are my favourite sports.</p>
+                        <img class="three" src={require('./images/engineering.jpg')} alt="Engineering" />
+                        <p id="p-three">I'm actively trying to be an engineer.</p>
+                        <img class="four" src={require('./images/photoshop.jpg')} alt="Photoshop" />
+                        <p id="p-four">I'm creative.</p>
+                        <img class="five" src={require('./images/lifeguard.jpg')} alt="Lifeguard" />
+                        <p id="p-five">Certified lifeguard and sunbather.</p>
+                        <img class="six" src={require('./images/food.jpg')} alt="Pasta" />
+                        <p id="p-six">I like good food.</p>
+                </div>
             </div>
         );
     }
