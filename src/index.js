@@ -98,7 +98,7 @@ class Projects extends Component
                     <br></br>
                     <br></br>
                     <br></br>
-                    <strong>Object Detection Hat for The Blind:</strong>
+                    <h3>Object Detection Hat for The Blind:</h3>
                     <p>A hat for the visually impaired that can detect an obstacle such as a wall and alert It’s user through a series of beeps.
                     This project was created using a cowboy hat, an Arduino Uno, and some sonar sensors.</p>
                     <br></br>
