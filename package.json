@@ -11,7 +11,7 @@
     "react-scripts": "2.1.8",
     "react-three-renderer": "^3.2.4",
     "react-three-renderer-objects": "0.0.6",
-    "three": "^0.86.0",
+    "three": "^0.125.0",
     "three-mtl-loader": "^1.0.2",
     "three-obj-loader": "^1.1.3"
   },
